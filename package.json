@@ -1,6 +1,6 @@
 {
   "name": "readme-activity-feed",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple package for generating list of recent Github activity of a user to put in your profile README.md",
   "main": "dist/index.js",
   "repository": {
