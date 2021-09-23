@@ -5,7 +5,7 @@ export async function Generate(username: string, maxEvents?: number, token?: str
 }
 
 export async function generate(username: string, maxEvents?: number, token?: string): Promise<string | undefined> {
-	if(maxEvents == undefined) maxEvents = 8;
+	if(maxEvents == undefined) maxEvents = 5;
 	if(token == undefined) token = process.env.GITHUB_TOKEN;
 
 	const result = [];
