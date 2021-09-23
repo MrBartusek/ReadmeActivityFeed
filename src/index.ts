@@ -22,32 +22,28 @@ export async function generate(username: string, maxEvents?: number, token?: str
 			const payload = event.payload;
 			const action = payload.action as string;
 
-			if(type == 'WatchEvent' && action == 'started') {
-				result.push(`⭐ Starred ${repo}`);
-			}
-			else if(type == 'ForkEvent') {
-				result.push(`⬇️ Forked ${repo}`);
+			if(type == 'ForkEvent') {
+				result.push(`🔀 Forked ${repo}`);
 			}
 			else if(type == 'IssueCommentEvent' && action == 'created') {
 				result.push(`🗣 Commented on ${issueOrPrURL(payload)} in ${repo}`);
 			}
-			else if(type == 'IssuesEvent' && ['created', 'closed', 'reopened'].includes(action)) {
-				const emoji = action != 'closed' ? '❗️' : '✔️';
-				result.push(`${emoji} ${capitalize(action)} ${issueOrPrURL(payload)} in ${repo}`);
+			else if(type == 'IssuesEvent' && ['opened', 'closed', 'reopened'].includes(action)) {
+				result.push(`❗️ ${capitalize(action)} ${issueOrPrURL(payload)} in ${repo}`);
 			}
 			else if (type == 'PublicEvent') {
 				result.push(`🎉 Published ${repo}`);
 			}
-			else if (type == 'PullRequestEvent' && ['created', 'closed', 'reopened'].includes(action)) {
+			else if (type == 'PullRequestEvent' && ['opened', 'closed', 'reopened'].includes(action)) {
 				const emoji = action != 'closed' ? '💪' : '❌';
-				result.push(`${emoji} ${capitalize(action)} ${issueOrPrURL(payload)} in ${repo}`);
+				result.push(`${emoji} ${capitalize(action)} PR ${issueOrPrURL(payload)} in ${repo}`);
 			}
 			else if (type == 'ReleaseEvent' && action == 'published') {
 				result.push(`🏷️ Published [${payload.release.tag_name}](${payload.release.html_url}) of ${repo}`);
 			}
 		}
 	}
-	return result.join('\n');
+	return result.join('<br>\n');
 }
 
 function issueOrPrURL(payload: any): string {
