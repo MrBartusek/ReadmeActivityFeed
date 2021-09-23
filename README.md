@@ -30,6 +30,11 @@ const readmeActivityFeed = require("readme-activity-feed")
 console.log(readmeActivityFeed.generate("MrBartusek"))
 ```
 
-Output:
+Example Output:
 
-TODO
+💪 Opened PR [#8](https://github.com/MrBartusek/ReadmeActivityFeed/pull/19370) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
+🏷️ Published [v1.0.0](https://github.com/MrBartusek/ReadmeActivityFeed/releases/tag/v1.0.0) of [ReadmeActivityFeed](https://github.com/ReadmeActivityFeed)<br>
+❗️ Closed [#42](https://github.com/MrBartusek/ReadmeActivityFeed/issues/42) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
+🗣 Commented on [#42](https://github.com/MrBartusek/ReadmeActivityFeed/issues/42) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
+🔀 Forked [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
+🎉 Published [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
