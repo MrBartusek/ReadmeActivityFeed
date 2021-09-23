@@ -24,6 +24,8 @@ This library exports `generate` function with alias `Generate`. It takes 3 argum
 
 ### Usage
 
+> You can see how it work on my [profile readme](https://github.com/MrBartusek)
+
 ```js
 const readmeActivityFeed = require("readme-activity-feed")
 
@@ -33,7 +35,7 @@ console.log(readmeActivityFeed.generate("MrBartusek"))
 Example Output:
 
 💪 Opened PR [#8](https://github.com/MrBartusek/ReadmeActivityFeed/pull/19370) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
-🏷️ Published [v1.0.0](https://github.com/MrBartusek/ReadmeActivityFeed/releases/tag/v1.0.0) of [ReadmeActivityFeed](https://github.com/ReadmeActivityFeed)<br>
+🏷️ Published [v1.0.0](https://github.com/MrBartusek/ReadmeActivityFeed/releases/tag/v1.0.0) of [MrBartusek/ReadmeActivityFeed](https://github.com/ReadmeActivityFeed)<br>
 ❗️ Closed [#42](https://github.com/MrBartusek/ReadmeActivityFeed/issues/42) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
 🗣 Commented on [#42](https://github.com/MrBartusek/ReadmeActivityFeed/issues/42) in [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
 🔀 Forked [MrBartusek/ReadmeActivityFeed](https://github.com/MrBartusek/ReadmeActivityFeed)<br>
