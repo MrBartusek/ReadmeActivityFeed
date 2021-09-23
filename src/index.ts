@@ -11,7 +11,8 @@ export async function generate(username: string, maxEvents?: number, token?: str
 	const result = [];
 	let page = 1;
 	while(result.length < maxEvents && page <= 3) {
-		const response = await get(`https://api.github.com/users/${username}/events?per_page=100&page=${page}`);
+		const headers = token == undefined ? {} : {authorization: `Bearer ${token}`};
+		const response = await get(`https://api.github.com/users/${username}/events?per_page=100&page=${page}`, { headers: headers });
 		const data = response.data;
 		page++;
 		for(const event of data) {
