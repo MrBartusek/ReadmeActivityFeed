@@ -20,7 +20,7 @@ This library exports `generate` function with alias `Generate`. It takes 3 argum
 | ---------- | ---------------------- | :------: | ----------------------------------- | ----------- |
 | username   | `string`               |          |                                     | Github username of a user. |
 | maxEvents  | `number`               | ✓        | 5                                   | The maximum number of lines generated. |
-| token      | `str`                  | ✓        | `GITHUB_TOKEN` environment variable | The [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) used for authentication to the Github API. This don't need to be provided but then, you can hit the ratelimit. |
+| token      | `str`                  | ✓        | `GITHUB_TOKEN` environment variable | The [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) used for authentication to the Github API. By default it uses `GITHUB_TOKEN` which is present when running in Github Actions. |
 
 ### Usage
 
