@@ -35,8 +35,9 @@ export async function generate(username: string, maxEvents?: number, token?: str
 				result.push(`🎉 Published ${repo}`);
 			}
 			else if (type == 'PullRequestEvent' && ['opened', 'closed', 'reopened'].includes(action)) {
-				const emoji = action != 'closed' ? '💪' : '❌';
-				result.push(`${emoji} ${capitalize(action)} PR ${issueOrPrURL(payload)} in ${repo}`);
+				const merged = payload.pull_request.merged;
+				const emoji = action == 'opened' ? '💪' : (merged ? '🎉' : '❌');
+				result.push(`${emoji} ${capitalize(merged ? 'Merged' : action)} PR ${issueOrPrURL(payload)} in ${repo}`);
 			}
 			else if (type == 'ReleaseEvent' && action == 'published') {
 				result.push(`🏷️ Published [${payload.release.tag_name}](${payload.release.html_url}) of ${repo}`);
